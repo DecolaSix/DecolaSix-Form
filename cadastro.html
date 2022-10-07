@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <title>Formulário</title>
+</head>
+
+<body>
+    <section id="container">
+        <form action="ficticio.php" method="post" class="form">
+            <label for="name">Nome*
+                <input type="text" name="name" id="name" placeholder="Digite seu nome"
+                    oninvalid="this.setCustomValidity('O Campo Nome é obrigatório.')"
+                    oninput="this.setCustomValidity('')" required autocomplete="off"/>
+            </label>
+            <label for="email">E-mail*
+                <input type="email" name="email" id="email"
+                    oninvalid="this.setCustomValidity('O Campo E-mail é obrigatório.')"
+                    oninput="this.setCustomValidity('')" autocomplete="off" placeholder="Digite seu E-mail" required>
+            </label>
+            <label for="password">Senha*
+                <input type="password" name="password" id="password"
+                    oninvalid="this.setCustomValidity('O Campo Senha é obrigatório.')"
+                    title="A senha deve conter, ao menos, uma letra minúscula, uma maiúscula, um número e 8 caracteres."
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Digite sua senha" autocomplete="off"
+                    oninput="setCustomValidity('')" required>
+            </label>
+            <label for="password-confirm">Confirme <br> a Senha*
+                <input type="password" name="password-confirm" id="password-confirm"
+                    oninvalid="this.setCustomValidity('O Campo Confirme a Senha é obrigatório.')"
+                    title="A senha deve ser compatível com a anterior."
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" oninput="this.setCustomValidity('')"
+                    placeholder="Confirme sua senha" autocomplete="off" required>
+            </label>
+            <button type="submit">Finalizar Cadastro</button>
+        </form>
+    </section>
+</body>
+
+</html>

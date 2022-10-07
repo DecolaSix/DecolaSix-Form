@@ -1,0 +1,57 @@
+body{
+    background: url('../img/background-form.webp') no-repeat;
+    background-size: cover;
+    background-position-y: center;
+}
+
+form.form{
+    background-color: #531274a5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+    justify-content: center;
+    height: 100vh;
+    font-size: 1em;
+    word-break: break-word;
+
+    > label {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 60px;
+        color: #FFF;
+        text-shadow: -1px 2px 3px #333;
+        >input:hover{
+            background-color: #f0d8fc;
+        }
+        
+        >input:focus{
+            padding: 8px;
+            background-color: #FFF;
+            border: 2px solid #531274;
+        }
+        
+        >input::placeholder{
+            color: rgba(82, 56, 87, 0.805);
+        }
+    }
+}
+
+
+button{
+    width: 140px;
+    height: 40px;
+    background-color: #53027b;
+    color: #FFF;
+    border: none;
+    border-radius: 5px ;
+    margin-top: 5%;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover{
+    background-color: #610291;
+    box-shadow: -2px 0 8px 0 #aa03fd70;
+}
